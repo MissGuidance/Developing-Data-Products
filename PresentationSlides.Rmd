@@ -1,0 +1,53 @@
+---
+title: "Final Project-Shiny Application and Reproducible Pitch"
+author: "Daria Kirilenko"
+date: "December 30th, 2018"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview 
+
+This is a short presentation that illustrates the basic functionality of Shiny Web App in R Studio. 
+
+The data being explored is a built-in dataset known as mcars, which will examine the relationship between MPG and Rear Axle Ratio.
+```{r message=FALSE, warning=FALSE}
+library(plotly)
+library(ggplot2)
+library(dplyr)
+```
+## Motor Trend Car Road Tests
+
+The dataset is comprised of fuel consumption and 10 aspects of automobile design and performance for 32 automobiles from the 1974 Motor Trend US magazine. The variables examined are mpg and drat.
+```{r echo = TRUE}
+head(mtcars,3)
+unique(mtcars$drat)
+```
+
+## Shiny Web Application
+
+The shiny application models and predicts the relationship between a car's MPG and Rear Axle Ratio in the R mtcars dataset using linear regression.
+
+The user can select the MPG using a slider.
+
+The application will output the plot of the regression line along with the corresponding Rear Axle Ratio.
+        
+The dataset description including its vaiables can be accessed by running the ?mtcars command from the R Studio console.
+
+The application is deployed and can be accessed by following the link below:
+(https://dmkirile.shinyapps.io/course_project_-_shiny_web_app/)
+
+The ui.R and server.R files are available on GitHub: (https://github.com/MissGuidance/Developing-Data-Products).
+
+## Conclusion
+
+The linear relationship examined between mpg and rear axle ratio shows a strong positive correlation in which an increase in rear axle ratio results in greater mpg.
+
+
+
+
